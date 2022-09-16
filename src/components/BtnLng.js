@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { style } from '../style/style';
 
 const Select = styled.select`
-  width: 40px;
+  width: 50px;
   background-color: ${style.mainColor};
   color: ${style.accentColor};
   border: none;

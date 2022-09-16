@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'http://localhost:8000/api/';
+axios.defaults.baseURL = 'https://salty-badlands-10459.herokuapp.com/api/';
 
 const token = {
   set(token) {
@@ -26,6 +26,7 @@ const fetchExpenses = createAsyncThunk(
     token.set(persistedToken);
     try {
       const { data } = await axios.get('expenses');
+
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue();
