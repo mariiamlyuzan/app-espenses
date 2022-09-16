@@ -10,6 +10,7 @@ import { ExpensesForm } from '../ExpensesForm';
 import { useEffect, useState } from 'react';
 import { expensesOperations } from '../../redux/expenses';
 import { useDispatch } from 'react-redux';
+import { FooterPage } from '../Footer';
 
 const Wrapper = styled.div`
   max-width: 90%;
@@ -44,18 +45,23 @@ export const CalendarComponent = () => {
   };
 
   return (
-    <Wrapper>
-      <Calendar
-        value={date}
-        onClickDay={e => onClickDay(e)}
-        locale={localStorage.getItem('i18nextLng') === 'en' ? 'en-EN' : 'ua-UA'}
-      />
-      {isModalOpen && (
-        <EditMaterialModal
-          item={<ExpensesForm value={dateToAdd} />}
-          onClose={closeModal}
+    <>
+      <Wrapper>
+        <Calendar
+          value={date}
+          onClickDay={e => onClickDay(e)}
+          locale={
+            localStorage.getItem('i18nextLng') === 'en' ? 'en-EN' : 'ua-UA'
+          }
         />
-      )}
-    </Wrapper>
+        {isModalOpen && (
+          <EditMaterialModal
+            item={<ExpensesForm value={dateToAdd} />}
+            onClose={closeModal}
+          />
+        )}
+      </Wrapper>
+      <FooterPage />
+    </>
   );
 };
