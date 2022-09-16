@@ -15,7 +15,7 @@ const BackDrop = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${style.mainColor};
-  overflow-y: auto;
+  overflow: auto;
 `;
 
 const Modal = styled.div`
