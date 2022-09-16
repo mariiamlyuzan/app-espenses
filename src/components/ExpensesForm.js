@@ -41,7 +41,7 @@ const Input = styled.input`
   min-width: 40%;
   background-color: ${style.mainColor};
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   cursor: pointer;
 `;
 

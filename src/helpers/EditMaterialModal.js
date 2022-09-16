@@ -15,7 +15,7 @@ const BackDrop = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${style.mainColor};
-  overflow: auto;
+  overflow-y: auto;
 `;
 
 const Modal = styled.div`
@@ -30,6 +30,7 @@ const Modal = styled.div`
   background-color: #282c34;
   border: none;
   color: ${style.accentColor};
+  overflow-y: auto;
 `;
 const Button = styled.button`
   position: absolute;

@@ -40,7 +40,7 @@ const Logo = styled.h2`
   font-size: 22px;
   margin: 0;
   text-decoration: none;
-  padding: 12px;
+  padding: 15px;
   min-width: 40%;
   border-radius: 8px;
   font-family: 'Kalam', cursive;
