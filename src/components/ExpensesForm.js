@@ -125,9 +125,15 @@ export const ExpensesForm = ({ value, reset }) => {
   });
   return (
     <>
-      <ButtonArrow onClick={() => reset()}>
-        <BsArrow90DegLeft />
-      </ButtonArrow>
+      {value && (
+        <ButtonArrow
+          onClick={() => {
+            reset();
+          }}
+        >
+          <BsArrow90DegLeft />
+        </ButtonArrow>
+      )}
       <Wrapper>
         <Form onSubmit={formik.handleSubmit}>
           <Label htmlFor="date">{t('date')}</Label>
