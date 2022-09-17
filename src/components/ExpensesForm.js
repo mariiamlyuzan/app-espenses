@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 const Wrapper = styled.div`
   max-width: 40%;
-  padding: 20px;
+  padding: 0;
   margin: 0 auto;
 `;
 
@@ -24,7 +24,7 @@ const Form = styled.form`
 const Label = styled.label`
   font-weight: 400;
   font-size: 20px;
-  padding: 8px;
+  padding: 5px;
   min-width: 40%;
 
   color: ${style.accentColor};
@@ -37,10 +37,10 @@ const Input = styled.input`
   color: ${style.accentColor};
   border: none;
   border-bottom: 1px solid ${style.accentColor};
-  padding: 8px;
+  padding: 6px;
   min-width: 40%;
   background-color: ${style.mainColor};
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   margin-bottom: 15px;
   cursor: pointer;
 `;
@@ -54,7 +54,7 @@ const Button = styled.button`
   border-bottom: 1px solid ${style.accentColor};
   padding: 12px;
   background-color: ${style.mainColor};
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {
@@ -64,24 +64,22 @@ const Button = styled.button`
   }
 `;
 
-export const ExpensesForm = ({ value }) => {
+export const ExpensesForm = ({ value, reset }) => {
   const { t } = useTranslation(['common']);
   const expenses = useSelector(expensesSelectors.getExpenses);
   const dispatch = useDispatch();
-
   const formik = useFormik({
     initialValues: {
       date: value ? value : '',
-      food: 0,
-      goods: 0,
-      services: 0,
-      makeup: 0,
-      medicine: 0,
-      clothing: 0,
-      transport: 0,
+      food: '0',
+      goods: '0',
+      services: '0',
+      makeup: '0',
+      medicine: '0',
+      clothing: '0',
+      transport: '0',
     },
     onSubmit: values => {
-      console.log(values);
       if (
         expenses.find(
           exp => exp.date.toLowerCase() === values.date.toLowerCase(),
@@ -100,13 +98,14 @@ export const ExpensesForm = ({ value }) => {
         return toast.error(t('PleasePickDate'));
       }
       dispatch(expensesOperations.addExpenses(values));
-
-      formik.resetForm();
+      reset();
       toast.success(
         localStorage.getItem('i18nextLng') === 'en'
           ? `${values.date} add to expenses`
           : `${values.date} додано`,
       );
+
+      formik.resetForm();
     },
   });
   return (
@@ -178,7 +177,8 @@ export const ExpensesForm = ({ value }) => {
           value={formik.values.transport}
         />
         <Button type="submit">
-          <FcMoneyTransfer /> {t('add')}
+          <FcMoneyTransfer />
+          {t('add')}
         </Button>
       </Form>
     </Wrapper>

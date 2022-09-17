@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import expensesOperations from './expenses-operations';
 
-const initialState = { expenses: [], expenses_id: null };
+const initialState = { expenses: [], expenses_id: null, expense_date: '' };
 
 const expensesSlice = createSlice({
   name: 'expenses',

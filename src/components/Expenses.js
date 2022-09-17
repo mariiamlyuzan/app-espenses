@@ -1,11 +1,14 @@
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { expensesSelectors } from '../redux/expenses';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 import { style } from '../style/style';
 import { useTranslation } from 'react-i18next';
+import { expensesOperations } from '../redux/expenses';
+import { useDispatch } from 'react-redux';
+
 const Box = styled.div`
   max-width: 40%;
   padding: 20px;
@@ -53,8 +56,21 @@ const Input = styled.input`
 `;
 export default function Expenses() {
   const { t } = useTranslation(['common']);
+  const dispatch = useDispatch();
   const expenses = useSelector(expensesSelectors.getExpenses);
   const [filter, setFilter] = useState('');
+
+  useEffect(() => {
+    async function fetch() {
+      try {
+        await dispatch(expensesOperations.fetchExpenses());
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetch();
+  }, [dispatch]);
+
   const changeFilter = e => {
     setFilter(e.currentTarget.value);
   };

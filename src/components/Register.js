@@ -42,7 +42,7 @@ const Input = styled.input`
   padding: 12px;
   min-width: 40%;
   background-color: ${style.mainColor};
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   margin-bottom: 20px;
   cursor: pointer;
 `;
@@ -56,7 +56,7 @@ const Button = styled.button`
   border-bottom: 1px solid ${style.accentColor};
   padding: 12px;
   background-color: ${style.mainColor};
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {

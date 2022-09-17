@@ -12,7 +12,7 @@ const Select = styled.select`
   border: none;
   padding-bottom: 3px;
   font-size: 15px;
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   border-bottom: 1px solid ${style.accentColor};
 `;
 

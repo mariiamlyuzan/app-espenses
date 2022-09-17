@@ -69,7 +69,6 @@ const addExpenses = createAsyncThunk(
     token.set(persistedToken);
     try {
       const { data } = await axios.post('expenses', credentials);
-      console.log(data);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue();
