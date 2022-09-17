@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { expensesOperations } from '../redux/expenses';
 import { style } from '../style/style';
-import { FcMoneyTransfer } from 'react-icons/fc';
+
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -53,7 +53,6 @@ const Button = styled.button`
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {
-  
     border-top: 1px solid ${style.accentColor};
     border-left: 1px solid ${style.accentColor};
     border-bottom: none;
@@ -169,10 +168,7 @@ export const ExpensesFormUpdate = ({ value }) => {
           Number(value.clothing) +
           Number(value.transport)}
       </Title>
-      <Button type="submit">
-        <FcMoneyTransfer />
-        {t('edit')}
-      </Button>
+      <Button type="submit">{t('edit')}</Button>
     </Form>
   );
 };
