@@ -49,11 +49,11 @@ const Button = styled.button`
   border-bottom: 1px solid ${style.accentColor};
   padding: 12px;
   background-color: ${style.mainColor};
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {
-    border-radius: 8px 8px 0 0;
+  
     border-top: 1px solid ${style.accentColor};
     border-left: 1px solid ${style.accentColor};
     border-bottom: none;

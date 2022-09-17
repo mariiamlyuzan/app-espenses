@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { expensesOperations, expensesSelectors } from '../redux/expenses';
 import { style } from '../style/style';
-import { FcMoneyTransfer } from 'react-icons/fc';
+
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
 
@@ -54,11 +54,10 @@ const Button = styled.button`
   border-bottom: 1px solid ${style.accentColor};
   padding: 12px;
   background-color: ${style.mainColor};
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {
-    border-radius: 8px 8px 0 0;
     border-top: 1px solid ${style.accentColor};
     border-left: 1px solid ${style.accentColor};
     border-bottom: none;
@@ -177,10 +176,7 @@ export const ExpensesForm = ({ value, reset }) => {
           onChange={formik.handleChange}
           value={formik.values.transport}
         />
-        <Button type="submit">
-          <FcMoneyTransfer />
-          {t('add')}
-        </Button>
+        <Button type="submit">{t('add')}</Button>
       </Form>
     </Wrapper>
   );
