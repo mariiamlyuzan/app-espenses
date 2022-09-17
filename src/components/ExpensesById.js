@@ -22,7 +22,6 @@ const Button = styled.button`
   color: ${style.accentColor};
   border: none;
 
-  padding: 5px;
   background-color: ${style.mainColor};
   border-radius: 8px;
   font-family: 'Kalam', cursive;
