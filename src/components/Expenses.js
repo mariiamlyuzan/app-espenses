@@ -50,7 +50,7 @@ const Input = styled.input`
   padding: 8px;
   min-width: 40%;
   background-color: ${style.mainColor};
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   margin-bottom: 20px;
   cursor: pointer;
 `;

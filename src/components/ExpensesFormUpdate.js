@@ -53,6 +53,7 @@ const Button = styled.button`
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {
+    border-radius: 8px 8px 0 0;
     border-top: 1px solid ${style.accentColor};
     border-left: 1px solid ${style.accentColor};
     border-bottom: none;
