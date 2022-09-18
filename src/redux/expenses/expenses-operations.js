@@ -88,12 +88,9 @@ const updateExpenses = createAsyncThunk(
     }
 
     token.set(persistedToken);
+    const { _id, ...fields } = credentials;
     try {
-      const { data } = await axios.put(
-        `expenses/${credentials._id}`,
-        credentials,
-      );
-      console.log(data);
+      const { data } = await axios.put(`expenses/${_id}`, fields);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue();

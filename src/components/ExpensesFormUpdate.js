@@ -75,7 +75,7 @@ export const ExpensesFormUpdate = ({ value }) => {
   const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
-      _id: value.id,
+      _id: value._id,
       date: value.date,
       food: value.food,
       goods: value.goods,
@@ -87,7 +87,9 @@ export const ExpensesFormUpdate = ({ value }) => {
     },
     onSubmit: values => {
       dispatch(expensesOperations.updateExpenses(values));
+
       toast.success(t('UpdateSuccessfully'));
+      formik.resetForm();
       navigate('/expenses');
     },
   });

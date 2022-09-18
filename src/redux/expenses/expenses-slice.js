@@ -18,7 +18,14 @@ const expensesSlice = createSlice({
     },
 
     [expensesOperations.updateExpenses.fulfilled](state, action) {
-      state.expenses = [...state.expenses, action.payload.expenses];
+      state.expenses = [
+        ...new Map(
+          [...state.expenses, action.payload.expenses].map(item => [
+            item['_id'],
+            item,
+          ]),
+        ).values(),
+      ];
     },
   },
 });

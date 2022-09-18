@@ -76,11 +76,7 @@ export default function Expenses() {
   };
 
   const getVisibleExpenses = () => {
-    const normalizedFilter = filter.toLowerCase();
-
-    return expenses.filter(exp =>
-      exp.date.toLowerCase().includes(normalizedFilter),
-    );
+    return expenses && expenses.filter(exp => exp.date.includes(filter));
   };
 
   const filterExpenses = getVisibleExpenses();

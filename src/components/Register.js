@@ -60,7 +60,6 @@ const Button = styled.button`
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {
-   
     border-top: 1px solid ${style.accentColor};
     border-left: 1px solid ${style.accentColor};
     border-bottom: none;
@@ -88,14 +87,52 @@ export const Register = () => {
     },
     validationSchema: Yup.object({
       name: Yup.string()
-        .min(2, 'Too Short!')
-        .max(30, 'Too Long!')
-        .required('Required'),
-      email: Yup.string().email('Invalid email').required('Required'),
+        .min(
+          2,
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Too Short!'
+            : 'Занадто коротке!',
+        )
+        .max(
+          30,
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Too Long!'
+            : 'Занадто довге',
+        )
+        .required(
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Required'
+            : 'Вимагається',
+        ),
+      email: Yup.string()
+        .email(
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Invalid email'
+            : 'Недійсна електронна адреса',
+        )
+        .required(
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Required'
+            : 'Вимагається',
+        ),
       password: Yup.string()
-        .min(6, 'Too Short!')
-        .max(50, 'Too Long!')
-        .required('Required'),
+        .min(
+          6,
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Too Short!'
+            : 'Занадто короткий!',
+        )
+        .max(
+          50,
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Too Long!'
+            : 'Занадто довгий',
+        )
+        .required(
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Required'
+            : 'Вимагається',
+        ),
     }),
     onSubmit: values => {
       dispatch(authOperations.register(values));

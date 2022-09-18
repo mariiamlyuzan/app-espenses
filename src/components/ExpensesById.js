@@ -34,6 +34,9 @@ export const ExpensesById = () => {
   const navigate = useNavigate();
   const { expensesId } = useParams();
 
+  // console.log(expensesByDate);
+  // console.log(expensesId);
+
   useEffect(() => {
     async function fetch() {
       try {

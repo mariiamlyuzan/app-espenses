@@ -86,11 +86,35 @@ export const Login = () => {
       password: '',
     },
     validationSchema: Yup.object({
-      email: Yup.string().email('Invalid email').required('Required'),
+      email: Yup.string()
+        .email(
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Invalid email'
+            : 'Недійсна електронна адреса',
+        )
+        .required(
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Required'
+            : 'Вимагається',
+        ),
       password: Yup.string()
-        .min(6, 'Too Short!')
-        .max(50, 'Too Long!')
-        .required('Required'),
+        .min(
+          6,
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Too Short!'
+            : 'Занадто короткий!',
+        )
+        .max(
+          50,
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Too Long!'
+            : 'Занадто довгий',
+        )
+        .required(
+          localStorage.getItem('i18nextLng') === 'en'
+            ? 'Required'
+            : 'Вимагається',
+        ),
     }),
     onSubmit: values => {
       dispatch(authOperations.logIn(values));
