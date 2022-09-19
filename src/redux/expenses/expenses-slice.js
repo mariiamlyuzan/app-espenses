@@ -14,7 +14,11 @@ const expensesSlice = createSlice({
       return { ...state, expenses_id: action.payload.expenses };
     },
     [expensesOperations.addExpenses.fulfilled](state, action) {
-      state.expenses = [...state.expenses, action.payload.expenses];
+      state.expenses = [
+        action.payload.expenses,
+        ...state.expenses,
+        action.payload.expenses,
+      ];
     },
 
     [expensesOperations.updateExpenses.fulfilled](state, action) {
