@@ -43,6 +43,7 @@
    "add": "Add",
    "edit": "Edit",
    "PleasePickDate": "Please pick a date.",
-   "UpdateSuccessfully": "Update successfully"
+   "UpdateSuccessfully": "Update successfully",
+   "pleaseRegisterOrLogin": "Please register or login"
 
 }

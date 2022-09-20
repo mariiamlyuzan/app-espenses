@@ -42,7 +42,8 @@
    "add": "Додати",
    "edit": "Редагувати",
    "PleasePickDate": "Будь ласка, виберіь дату.",
-   "UpdateSuccessfully": "Оновлено успішно"
+   "UpdateSuccessfully": "Оновлено успішно",
+   "pleaseRegisterOrLogin": "Будь ласка, зареєструйтеся або увійдіть"
 
 
 }
