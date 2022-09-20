@@ -34,9 +34,6 @@ export const ExpensesById = () => {
   const navigate = useNavigate();
   const { expensesId } = useParams();
 
-  // console.log(expensesByDate);
-  // console.log(expensesId);
-
   useEffect(() => {
     async function fetch() {
       try {
@@ -47,6 +44,7 @@ export const ExpensesById = () => {
     }
     fetch();
   }, [expensesId, dispatch]);
+
   return (
     <>
       <Button onClick={() => navigate(-1)}>

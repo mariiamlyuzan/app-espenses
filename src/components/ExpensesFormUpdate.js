@@ -20,7 +20,6 @@ const Form = styled.form`
 const Label = styled.label`
   font-weight: 400;
   font-size: 20px;
-
   min-width: 40%;
   color: ${style.accentColor};
 `;
@@ -74,6 +73,7 @@ export const ExpensesFormUpdate = ({ value }) => {
 
   const dispatch = useDispatch();
   const formik = useFormik({
+    enableReinitialize: true,
     initialValues: {
       _id: value._id,
       date: value.date,
@@ -85,6 +85,7 @@ export const ExpensesFormUpdate = ({ value }) => {
       clothing: value.clothing,
       transport: value.transport,
     },
+
     onSubmit: values => {
       dispatch(expensesOperations.updateExpenses(values));
 
@@ -108,7 +109,7 @@ export const ExpensesFormUpdate = ({ value }) => {
       <Input
         id="food"
         name="food"
-        type="food"
+        type="text"
         onChange={formik.handleChange}
         value={formik.values.food}
       />
@@ -116,7 +117,7 @@ export const ExpensesFormUpdate = ({ value }) => {
       <Input
         id="goods"
         name="goods"
-        type="goods"
+        type="text"
         onChange={formik.handleChange}
         value={formik.values.goods}
       />
@@ -124,7 +125,7 @@ export const ExpensesFormUpdate = ({ value }) => {
       <Input
         id="services"
         name="services"
-        type="services"
+        type="text"
         onChange={formik.handleChange}
         value={formik.values.services}
       />
@@ -132,7 +133,7 @@ export const ExpensesFormUpdate = ({ value }) => {
       <Input
         id="makeup"
         name="makeup"
-        type="makeup"
+        type="text"
         onChange={formik.handleChange}
         value={formik.values.makeup}
       />
@@ -140,7 +141,7 @@ export const ExpensesFormUpdate = ({ value }) => {
       <Input
         id="medicine"
         name="medicine"
-        type="medicine"
+        type="text"
         onChange={formik.handleChange}
         value={formik.values.medicine}
       />
@@ -148,7 +149,7 @@ export const ExpensesFormUpdate = ({ value }) => {
       <Input
         id="clothing"
         name="clothing"
-        type="clothing"
+        type="text"
         onChange={formik.handleChange}
         value={formik.values.clothing}
       />
@@ -156,7 +157,7 @@ export const ExpensesFormUpdate = ({ value }) => {
       <Input
         id="transport"
         name="transport"
-        type="transport"
+        type="text"
         onChange={formik.handleChange}
         value={formik.values.transport}
       />

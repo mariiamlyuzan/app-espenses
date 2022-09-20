@@ -151,7 +151,7 @@ export const Register = () => {
         <Input
           id="name"
           name="name"
-          type="name"
+          type="text"
           onChange={formik.handleChange}
           value={formik.values.name}
         />

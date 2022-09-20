@@ -149,7 +149,7 @@ export const ExpensesForm = ({ value, reset }) => {
           <Input
             id="food"
             name="food"
-            type="food"
+            type="text"
             onChange={formik.handleChange}
             value={formik.values.food}
           />
@@ -157,7 +157,7 @@ export const ExpensesForm = ({ value, reset }) => {
           <Input
             id="goods"
             name="goods"
-            type="goods"
+            type="text"
             onChange={formik.handleChange}
             value={formik.values.goods}
           />
@@ -165,7 +165,7 @@ export const ExpensesForm = ({ value, reset }) => {
           <Input
             id="services"
             name="services"
-            type="services"
+            type="text"
             onChange={formik.handleChange}
             value={formik.values.services}
           />
@@ -173,7 +173,7 @@ export const ExpensesForm = ({ value, reset }) => {
           <Input
             id="makeup"
             name="makeup"
-            type="makeup"
+            type="text"
             onChange={formik.handleChange}
             value={formik.values.makeup}
           />
@@ -181,7 +181,7 @@ export const ExpensesForm = ({ value, reset }) => {
           <Input
             id="medicine"
             name="medicine"
-            type="medicine"
+            type="text"
             onChange={formik.handleChange}
             value={formik.values.medicine}
           />
@@ -189,7 +189,7 @@ export const ExpensesForm = ({ value, reset }) => {
           <Input
             id="clothing"
             name="clothing"
-            type="clothing"
+            type="text"
             onChange={formik.handleChange}
             value={formik.values.clothing}
           />
@@ -197,7 +197,7 @@ export const ExpensesForm = ({ value, reset }) => {
           <Input
             id="transport"
             name="transport"
-            type="transport"
+            type="text"
             onChange={formik.handleChange}
             value={formik.values.transport}
           />
