@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 
 const Wrapper = styled.div`
   max-width: 90%;
-  margin: auto;
+  margin: 40px auto auto auto;
   background-color: #282c34;
   display: flex;
   justify-content: center;
