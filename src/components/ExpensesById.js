@@ -10,8 +10,9 @@ import { BsArrow90DegLeft } from 'react-icons/bs';
 
 const Wrapper = styled.div`
   max-width: 40%;
-  padding: 10px;
+  padding: 0;
   margin: 0 auto;
+  margin-bottom: 30px;
 `;
 
 const Button = styled.button`

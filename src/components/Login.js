@@ -9,8 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 const Wrapper = styled.div`
   max-width: 40%;
-  padding: 20px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
 `;
 
 const Form = styled.form`

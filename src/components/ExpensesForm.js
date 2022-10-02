@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   max-width: 40%;
   padding: 0;
   margin: 0 auto;
+  margin-bottom: 30px;
 `;
 
 const Form = styled.form`
@@ -25,7 +26,7 @@ const Form = styled.form`
 const Label = styled.label`
   font-weight: 400;
   font-size: 20px;
-  padding: 5px;
+
   min-width: 40%;
 
   color: ${style.accentColor};
