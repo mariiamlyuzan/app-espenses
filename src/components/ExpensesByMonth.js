@@ -117,7 +117,7 @@ export default function ExpensesByMonth() {
                     expenses
                       .filter(exp => exp.date.slice(0, 7) === yearAndMonth)
                       .reduce((prev, exp) => {
-                        return Number(prev) + Number(exp.goods);
+                        return Number(prev) + Number(exp.food);
                       }, 0)}
                 </Item2>
               </Item>
