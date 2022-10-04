@@ -85,7 +85,12 @@ export default function Expenses() {
       <Wrapper>
         <Label>
           {t('findExpenses')}
-          <Input type="text" value={filter} onChange={changeFilter}></Input>
+          <Input
+            type="text"
+            placeholder={t('yyyy/mm/dd')}
+            value={filter}
+            onChange={changeFilter}
+          ></Input>
         </Label>
 
         {filterExpenses &&

@@ -43,7 +43,9 @@
    "edit": "Редагувати",
    "PleasePickDate": "Будь ласка, виберіь дату.",
    "UpdateSuccessfully": "Оновлено успішно",
-   "pleaseRegisterOrLogin": "Будь ласка, зареєструйтеся або увійдіть"
-
+   "pleaseRegisterOrLogin": "Будь ласка, зареєструйтеся або увійдіть",
+   "find": "Знайти",
+   "yyyy/mm" : "рррр-мм",
+   "yyyy/mm/dd" : "рррp-мм-дд"
 
 }

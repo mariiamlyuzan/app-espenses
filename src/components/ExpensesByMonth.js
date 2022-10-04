@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { expensesSelectors } from '../redux/expenses';
 import { style } from '../style/style';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 const Wrapper = styled.div`
   display: flex;
@@ -30,7 +31,7 @@ const Title = styled.p`
 
 const Item = styled.p`
   font-weight: 100;
-  font-size: 15px;
+  font-size: 17px;
   text-decoration: none;
   padding: 0px;
 
@@ -38,13 +39,39 @@ const Item = styled.p`
 `;
 const Item2 = styled.span`
   font-weight: 100;
-  font-size: 17px;
+  font-size: 18px;
   text-decoration: none;
   padding: 0px;
   margin-left: 8px;
   color: ${style.accentColor};
 `;
+
+const Label = styled.label`
+  font-weight: 400;
+  font-size: 20px;
+  padding: 8px;
+  min-width: 40%;
+  display: block;
+  color: ${style.accentColor};
+`;
+
+const Input = styled.input`
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  color: ${style.accentColor};
+  border: none;
+  border-bottom: 1px solid ${style.accentColor};
+  padding: 8px;
+  min-width: 40%;
+  background-color: ${style.mainColor};
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+`;
+
 export default function ExpensesByMonth() {
+  const [filter, setFilter] = useState('');
   const { t } = useTranslation(['common']);
   const expenses = useSelector(expensesSelectors.getExpenses);
 
@@ -56,10 +83,30 @@ export default function ExpensesByMonth() {
     (a, b) => Number(b) - Number(a),
   );
 
+  const changeFilter = e => {
+    setFilter(e.currentTarget.value);
+  };
+
+  const getVisibleExpenses = () => {
+    return (
+      allyearAndMonthAndMonthSort &&
+      allyearAndMonthAndMonthSort.filter(date => date.includes(filter))
+    );
+  };
+
+  const allyearAndMonthAndMonthSortAndFilter = getVisibleExpenses();
+
   return (
     <>
-      {allyearAndMonthAndMonthSort &&
-        allyearAndMonthAndMonthSort.map(yearAndMonth => (
+      <Label>{t('find')}</Label>
+      <Input
+        type="text"
+        placeholder={t('yyyy/mm')}
+        value={filter}
+        onChange={changeFilter}
+      ></Input>
+      {allyearAndMonthAndMonthSortAndFilter &&
+        allyearAndMonthAndMonthSortAndFilter.map(yearAndMonth => (
           <Wrapper key={yearAndMonth}>
             <Box>
               <Title>{yearAndMonth}</Title>
@@ -70,7 +117,7 @@ export default function ExpensesByMonth() {
                     expenses
                       .filter(exp => exp.date.slice(0, 7) === yearAndMonth)
                       .reduce((prev, exp) => {
-                        return Number(prev) + Number(exp.food);
+                        return Number(prev) + Number(exp.goods);
                       }, 0)}
                 </Item2>
               </Item>

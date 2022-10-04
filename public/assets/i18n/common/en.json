@@ -44,6 +44,9 @@
    "edit": "Edit",
    "PleasePickDate": "Please pick a date.",
    "UpdateSuccessfully": "Update successfully",
-   "pleaseRegisterOrLogin": "Please register or login"
+   "pleaseRegisterOrLogin": "Please register or login",
+   "find": "Find",
+   "yyyy/mm" : "yyyy-mm",
+   "yyyy/mm/dd" : "yyyy-mm-dd"
 
 }
