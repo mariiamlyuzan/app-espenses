@@ -39,6 +39,9 @@ const RightNav = ({ open, onLink }) => {
   const { t } = useTranslation(['common']);
   return (
     <Ul open={open}>
+      <LI to="/profile" onClick={onLink}>
+        {t('profile')}
+      </LI>
       <LI to="/calendar" onClick={onLink}>
         {t('calendar')}
       </LI>

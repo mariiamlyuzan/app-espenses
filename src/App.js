@@ -22,6 +22,7 @@ import ExpensesByMonth from './components/ExpensesByMonth';
 import { useTranslation } from 'react-i18next';
 import BtnLng from './components/BtnLng';
 import 'react-toastify/dist/ReactToastify.css';
+import { Profile } from './components/Profile';
 
 const Wrapper = styled.div`
   align-items: center;
@@ -136,6 +137,16 @@ function App() {
             </PublicRoute>
           }
         />
+
+        <Route
+          path="profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+
         <Route
           path="calendar"
           element={

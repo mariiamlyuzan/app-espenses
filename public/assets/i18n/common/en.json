@@ -47,6 +47,7 @@
    "pleaseRegisterOrLogin": "Please register or login",
    "find": "Find",
    "yyyy/mm" : "yyyy-mm",
-   "yyyy/mm/dd" : "yyyy-mm-dd"
+   "yyyy/mm/dd" : "yyyy-mm-dd",
+   "profile": "Account"
 
 }

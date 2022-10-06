@@ -46,6 +46,7 @@
    "pleaseRegisterOrLogin": "Будь ласка, зареєструйтеся або увійдіть",
    "find": "Знайти",
    "yyyy/mm" : "рррр-мм",
-   "yyyy/mm/dd" : "рррp-мм-дд"
+   "yyyy/mm/dd" : "рррp-мм-дд",
+   "profile": "Акаунт"
 
 }
