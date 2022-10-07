@@ -14,10 +14,10 @@ const Button = styled.button`
   font-weight: 100;
   font-size: 20px;
   text-decoration: none;
-  color: ${style.accentColor};
+  color: ${style.mainColor};
   border: none;
   padding: 0;
-  background-color: ${style.mainColor};
+  background-color: ${style.accentColor};
   border-radius: 8px;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;

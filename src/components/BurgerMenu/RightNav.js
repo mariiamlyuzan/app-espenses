@@ -13,26 +13,28 @@ const Ul = styled.ul`
   
   @media (max-width: 1200px) {
     flex-flow: column nowrap;
-    background-color: ${style.mainColor};
+    background-color: ${style.accentColor};
     position: fixed;
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
-    top: 0;
+    top: -15px;
     right: 0;
     height: 100vh;
-    width: 80%;
+    width: 75%;
     padding-top: 3.5rem;
     transition: 800ms all ease-in-out;
 `;
 const LI = styled(NavLink)`
-  font-weight: 100;
+  font-weight: 400;
   font-size: 20px;
   text-decoration: none;
   padding: 12px;
 
-  color: ${style.accentColor};
+  color: ${style.mainColor};
 
   &.active {
-    color: ${style.activeColor};
+    background: linear-gradient(270deg, #b527cf, #3bd9d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;
 const RightNav = ({ open, onLink }) => {
