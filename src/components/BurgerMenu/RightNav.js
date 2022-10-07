@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import UserMenu from '../UserMenu';
 import { style } from '../../style/style';
 import { useTranslation } from 'react-i18next';
+
 const Ul = styled.ul`
   list-style: none;
   display: flex;
@@ -20,8 +21,7 @@ const Ul = styled.ul`
     height: 100vh;
     width: 80%;
     padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out;
-    
+    transition: 1000ms all ease-in-out;
 `;
 const LI = styled(NavLink)`
   font-weight: 100;
