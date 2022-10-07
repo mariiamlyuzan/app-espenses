@@ -21,7 +21,7 @@ const Ul = styled.ul`
     height: 100vh;
     width: 80%;
     padding-top: 3.5rem;
-    transition: 1000ms all ease-in-out;
+    transition: 800ms all ease-in-out;
 `;
 const LI = styled(NavLink)`
   font-weight: 100;
