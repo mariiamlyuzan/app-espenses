@@ -79,7 +79,7 @@ export default function Expenses() {
     return expenses && expenses.filter(exp => exp.date.includes(filter));
   };
 
-  const filterExpenses = getVisibleExpenses();
+  const filterExpenses = getVisibleExpenses().reverse();
   return (
     <Box>
       <Wrapper>
