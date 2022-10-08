@@ -44,6 +44,9 @@ const RightNav = ({ open, onLink }) => {
       <LI to="/profile" onClick={onLink}>
         {t('profile')}
       </LI>
+      <LI to="/income" onClick={onLink}>
+        {t('income')}
+      </LI>
       <LI to="/calendar" onClick={onLink}>
         {t('calendar')}
       </LI>

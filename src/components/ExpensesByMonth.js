@@ -10,9 +10,6 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-weight: 100;
-  font-size: 20px;
-  text-decoration: none;
   padding: 0px;
 `;
 const Box = styled.div`
@@ -75,11 +72,11 @@ export default function ExpensesByMonth() {
   const { t } = useTranslation(['common']);
   const expenses = useSelector(expensesSelectors.getExpenses);
 
-  const yearAndMonthAndMonth = expenses.map(exp => exp.date.slice(0, 7));
+  const yearAndMonth = expenses.map(exp => exp.date.slice(0, 7));
 
-  const allyearAndMonthAndMonth = [...new Set(yearAndMonthAndMonth)];
+  const allyearAndMonth = [...new Set(yearAndMonth)];
 
-  const allyearAndMonthAndMonthSort = [...allyearAndMonthAndMonth].sort(
+  const allyearAndMonthSort = [...allyearAndMonth].sort(
     (a, b) => Number(b) - Number(a),
   );
 
@@ -89,12 +86,12 @@ export default function ExpensesByMonth() {
 
   const getVisibleExpenses = () => {
     return (
-      allyearAndMonthAndMonthSort &&
-      allyearAndMonthAndMonthSort.filter(date => date.includes(filter))
+      allyearAndMonthSort &&
+      allyearAndMonthSort.filter(date => date.includes(filter))
     );
   };
 
-  const allyearAndMonthAndMonthSortAndFilter = getVisibleExpenses();
+  const allyearAndMonthSortAndFilter = getVisibleExpenses();
 
   return (
     <>
@@ -105,8 +102,8 @@ export default function ExpensesByMonth() {
         value={filter}
         onChange={changeFilter}
       ></Input>
-      {allyearAndMonthAndMonthSortAndFilter &&
-        allyearAndMonthAndMonthSortAndFilter.map(yearAndMonth => (
+      {allyearAndMonthSortAndFilter &&
+        allyearAndMonthSortAndFilter.map(yearAndMonth => (
           <Wrapper key={yearAndMonth}>
             <Box>
               <Title>{yearAndMonth}</Title>

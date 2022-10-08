@@ -48,6 +48,7 @@
    "find": "Find",
    "yyyy/mm" : "yyyy-mm",
    "yyyy/mm/dd" : "yyyy-mm-dd",
-   "profile": "Account"
+   "profile": "Account",
+   "income": "Comings-in"
 
 }
