@@ -15,12 +15,12 @@ const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 280px;
 `;
 
 const Label = styled.label`
   font-weight: 400;
   font-size: 20px;
-  min-width: 40%;
   color: ${style.accentColor};
 `;
 
@@ -32,8 +32,8 @@ const Input = styled.input`
   border: none;
   border-bottom: 1px solid ${style.accentColor};
   padding-bottom: 8px;
-  min-width: 40%;
   background-color: ${style.mainColor};
+  width: 96%;
   border-radius: 0 0 8px 8px;
   margin-bottom: 20px;
   cursor: pointer;
@@ -48,13 +48,14 @@ const Button = styled.button`
   border-bottom: 1px solid ${style.accentColor};
   padding: 12px;
   background-color: ${style.mainColor};
-  border-radius: 8px;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {
-    border-top: 1px solid ${style.accentColor};
-    border-left: 1px solid ${style.accentColor};
-    border-bottom: none;
+    background: linear-gradient(270deg, #b527cf, #3bd9d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;
 

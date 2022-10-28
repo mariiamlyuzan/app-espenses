@@ -11,8 +11,8 @@ import * as Yup from 'yup';
 import { useTranslation } from 'react-i18next';
 
 const Wrapper = styled.div`
-  max-width: 40%;
   margin: 0 auto 30px auto;
+  width: 280px;
 `;
 
 const Form = styled.form`
@@ -39,7 +39,6 @@ const Input = styled.input`
   border: none;
   border-bottom: 1px solid ${style.accentColor};
   padding: 12px;
-  min-width: 40%;
   background-color: ${style.mainColor};
   border-radius: 0 0 8px 8px;
   margin-bottom: 20px;
@@ -50,18 +49,20 @@ const Button = styled.button`
   font-weight: 400;
   font-size: 20px;
   text-decoration: none;
+
   color: ${style.accentColor};
   border: none;
   border-bottom: 1px solid ${style.accentColor};
   padding: 12px;
   background-color: ${style.mainColor};
-  border-radius: 8px;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {
-    border-top: 1px solid ${style.accentColor};
-    border-left: 1px solid ${style.accentColor};
-    border-bottom: none;
+    background: linear-gradient(270deg, #b527cf, #3bd9d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;
 
