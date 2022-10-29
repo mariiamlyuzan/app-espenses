@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
 
 const Wrapper = styled.div`
-  max-width: 40%;
+  width: 280px;
   padding: 0;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -25,9 +25,6 @@ const Form = styled.form`
 const Label = styled.label`
   font-weight: 400;
   font-size: 20px;
-
-  min-width: 40%;
-
   color: ${style.accentColor};
 `;
 
@@ -39,7 +36,7 @@ const Input = styled.input`
   border: none;
   border-bottom: 1px solid ${style.accentColor};
   padding: 6px;
-  min-width: 40%;
+  width: 96%;
   background-color: ${style.mainColor};
   border-radius: 0 0 8px 8px;
   margin-bottom: 15px;
@@ -49,19 +46,19 @@ const Input = styled.input`
 const Button = styled.button`
   font-weight: 400;
   font-size: 20px;
+  width: 100%;
   text-decoration: none;
   color: ${style.accentColor};
-  border: none;
-  border-bottom: 1px solid ${style.accentColor};
+  border: 1px solid ${style.accentColor};
   padding: 12px;
   background-color: ${style.mainColor};
   border-radius: 8px;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {
-    border-top: 1px solid ${style.accentColor};
-    border-left: 1px solid ${style.accentColor};
-    border-bottom: none;
+    background: linear-gradient(270deg, #b527cf, #3bd9d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;
 
