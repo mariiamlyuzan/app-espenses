@@ -15,7 +15,6 @@ const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 280px;
 `;
 
 const Label = styled.label`

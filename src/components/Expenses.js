@@ -10,7 +10,7 @@ import { expensesOperations } from '../redux/expenses';
 import { useDispatch } from 'react-redux';
 
 const Box = styled.div`
-  max-width: 40%;
+  width: 280px;
   padding: 20px;
   margin: 0 auto;
 `;

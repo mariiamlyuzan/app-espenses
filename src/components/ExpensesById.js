@@ -9,7 +9,7 @@ import { ExpensesFormUpdate } from './ExpensesFormUpdate';
 import { BsArrow90DegLeft } from 'react-icons/bs';
 
 const Wrapper = styled.div`
-  max-width: 40%;
+  width: 280px;
   padding: 0;
   margin: 0 auto;
   margin-bottom: 30px;
