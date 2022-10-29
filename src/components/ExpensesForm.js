@@ -67,7 +67,7 @@ const Button = styled.button`
   padding: 12px;
   background-color: ${style.mainColor};
   width: 100%;
-  border-bottom-radius: 8px;
+  border-radius: 0 0 8px 8px;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {
