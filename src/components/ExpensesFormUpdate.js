@@ -44,12 +44,11 @@ const Button = styled.button`
   font-size: 20px;
   text-decoration: none;
   color: ${style.accentColor};
-  border: none;
-  border-bottom: 1px solid ${style.accentColor};
+  border: 1px solid ${style.accentColor};
   padding: 12px;
   background-color: ${style.mainColor};
   width: 100%;
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
   :hover {
